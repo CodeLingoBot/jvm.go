@@ -48,7 +48,7 @@ func (self *BytecodeReader) ReadInt32s(count int32) []int32 {
 	return ints
 }
 
-// used by lookupswitch and tableswitch
+// SkipPadding: used by lookupswitch and tableswitch
 func (self *BytecodeReader) SkipPadding() {
 	for self.pc%4 != 0 {
 		self.ReadUint8()

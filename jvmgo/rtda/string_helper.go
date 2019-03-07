@@ -21,7 +21,7 @@ func JString(goStr string) *heap.Object {
 	return InternString(goStr, jStr)
 }
 
-// java.lang.String -> go string
+// GoString: java.lang.String -> go string
 func GoString(jStr *heap.Object) string {
 	charArr := jStr.GetFieldValue("value", "[C").(*heap.Object)
 	return _utf16ToString(charArr.Chars())

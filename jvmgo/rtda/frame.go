@@ -41,7 +41,7 @@ func (self *Frame) reset(method *heap.Method) {
 	}
 }
 
-// getters & setters
+// Thread: getters & setters
 func (self *Frame) Thread() *Thread {
 	return self.thread
 }
@@ -68,7 +68,7 @@ func (self *Frame) RevertNextPC() {
 	self.nextPC = self.thread.pc
 }
 
-// todo
+// ClassLoader: todo
 func (self *Frame) ClassLoader() *heap.ClassLoader {
 	return heap.BootLoader()
 }

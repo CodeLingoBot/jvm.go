@@ -23,7 +23,7 @@ func (self *Object) String() string {
 		self, self.class, self.extra)
 }
 
-// getters & setters
+// Class: getters & setters
 func (self *Object) Class() *Class {
 	return self.class
 }
@@ -75,7 +75,7 @@ func (self *Object) initFields() {
 	}
 }
 
-// state lock
+// LockState: state lock
 func (self *Object) LockState() {
 	self.lock.Lock()
 }
@@ -89,7 +89,7 @@ func (self *Object) RUnlockState() {
 	self.lock.RUnlock()
 }
 
-// reflection
+// GetFieldValue: reflection
 func (self *Object) GetFieldValue(fieldName, fieldDescriptor string) interface{} {
 	field := self.class.GetInstanceField(fieldName, fieldDescriptor)
 	return field.GetValue(self)

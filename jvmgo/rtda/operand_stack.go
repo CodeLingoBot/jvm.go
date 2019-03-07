@@ -65,7 +65,7 @@ func (self *OperandStack) PopInt() int32 {
 	return top.(int32)
 }
 
-// long consumes two slots
+// PushLong: long consumes two slots
 func (self *OperandStack) PushLong(val int64) {
 	self.slots[self.size] = val
 	self.size += 2
@@ -88,7 +88,7 @@ func (self *OperandStack) PopFloat() float32 {
 	return top.(float32)
 }
 
-// double consumes two slots
+// PushDouble: double consumes two slots
 func (self *OperandStack) PushDouble(val float64) {
 	self.slots[self.size] = val
 	self.size += 2
@@ -154,7 +154,7 @@ func (self *OperandStack) Clear() {
 	}
 }
 
-// only used by native methods
+// HackSetSlots: only used by native methods
 func (self *OperandStack) HackSetSlots(slots []interface{}) {
 	self.slots = slots
 	self.size = uint(len(slots))

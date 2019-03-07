@@ -76,7 +76,7 @@ func (self *Field) defaultValue() interface{} {
 	}
 }
 
-// reflection
+// Type: reflection
 func (self *Field) Type() *Class {
 	if self._type == nil {
 		self._type = self.resolveType()

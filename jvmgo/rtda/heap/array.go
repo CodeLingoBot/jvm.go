@@ -86,7 +86,7 @@ func NewRefArray(componentClass *Class, count uint) *Object {
 	return newObj(arrClass, components, nil)
 }
 
-// todo rename
+// NewRefArray2: todo rename
 func NewRefArray2(componentClass *Class, components []*Object) *Object {
 	arrClass := componentClass.arrayClass()
 	return newObj(arrClass, components, nil)

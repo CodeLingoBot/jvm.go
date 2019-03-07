@@ -11,7 +11,7 @@ type Command struct {
 	args    []string
 }
 
-// getters
+// Class: getters
 func (self *Command) Class() string {
 	return self.class
 }

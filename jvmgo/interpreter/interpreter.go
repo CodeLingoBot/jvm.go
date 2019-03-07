@@ -8,7 +8,7 @@ import (
 	"github.com/zxh0/jvm.go/jvmgo/rtda"
 )
 
-// todo
+// Loop: todo
 func Loop(thread *rtda.Thread) {
 	threadObj := thread.JThread()
 	isDaemon := threadObj != nil && threadObj.GetFieldValue("daemon", "Z").(int32) == 1

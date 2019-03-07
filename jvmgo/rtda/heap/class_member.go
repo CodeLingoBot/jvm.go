@@ -25,7 +25,7 @@ func (self *ClassMember) Class() *Class {
 	return self.class
 }
 
-// func (self *ClassMember) ClassLoader() *ClassLoader {
+// ConstantPool: func (self *ClassMember) ClassLoader() *ClassLoader {
 // 	return self.class.classLoader
 // }
 func (self *ClassMember) ConstantPool() *ConstantPool {

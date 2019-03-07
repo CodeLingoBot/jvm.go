@@ -15,7 +15,7 @@ func newConstantInterfaceMethodref(refInfo *cf.ConstantInterfaceMethodrefInfo) *
 	return ref
 }
 
-// todo
+// FindInterfaceMethod: todo
 func (self *ConstantInterfaceMethodref) FindInterfaceMethod(ref *Object) *Method {
 	for class := ref.class; class != nil; class = class.superClass {
 		method := class.getMethod(self.name, self.descriptor, false)

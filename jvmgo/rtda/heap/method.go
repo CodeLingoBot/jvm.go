@@ -71,7 +71,7 @@ func (self *Method) String() string {
 	return fmt.Sprintf("{Method name:%v descriptor:%v}", self.name, self.descriptor)
 }
 
-// getters & setters
+// MaxStack: getters & setters
 func (self *Method) MaxStack() uint {
 	return self.maxStack
 }

@@ -44,7 +44,7 @@ func NewThread(jThread *heap.Object) *Thread {
 	return thread
 }
 
-// getters & setters
+// PC: getters & setters
 func (self *Thread) PC() int {
 	return self.pc
 }
@@ -173,7 +173,7 @@ func (self *Thread) HandleUncaughtException(ex *heap.Object) {
 	// self.PushFrame(newFrame)
 }
 
-// hack
+// HackSetJThread: hack
 func (self *Thread) HackSetJThread(jThread *heap.Object) {
 	self.jThread = jThread
 }

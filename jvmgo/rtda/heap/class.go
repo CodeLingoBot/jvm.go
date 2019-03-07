@@ -42,7 +42,7 @@ func (self *Class) String() string {
 	return "{Class name:" + self.name + "}"
 }
 
-// getters
+// ConstantPool: getters
 func (self *Class) ConstantPool() *ConstantPool {
 	return self.constantPool
 }
@@ -74,7 +74,7 @@ func (self *Class) InitCond() *sync.Cond {
 	return self.initCond
 }
 
-// todo
+// NameJlsFormat: todo
 func (self *Class) NameJlsFormat() string {
 	return SlashToDot(self.name)
 }
@@ -191,7 +191,7 @@ func (self *Class) isJioSerializable() bool {
 	return self == _ioSerializableClass
 }
 
-// reflection
+// GetStaticValue: reflection
 func (self *Class) GetStaticValue(fieldName, fieldDescriptor string) interface{} {
 	field := self.GetStaticField(fieldName, fieldDescriptor)
 	return field.GetStaticValue()

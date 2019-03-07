@@ -10,7 +10,7 @@ func getInternedString(goStr string) *heap.Object {
 	return _internedStrings[goStr]
 }
 
-// todo
+// InternString: todo
 func InternString(goStr string, jStr *heap.Object) *heap.Object {
 	if internedStr, ok := _internedStrings[goStr]; ok {
 		return internedStr

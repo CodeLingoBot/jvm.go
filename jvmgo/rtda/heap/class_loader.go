@@ -131,7 +131,7 @@ func (self *ClassLoader) JLThreadClass() *Class {
 	return _jlThreadClass
 }
 
-// todo
+// GetPrimitiveClass: todo
 func (self *ClassLoader) GetPrimitiveClass(name string) *Class {
 	return self.getClass(name)
 }
@@ -273,7 +273,7 @@ func prepare(class *Class) {
 	}
 }
 
-// todo
+// DefineClass: todo
 func (self *ClassLoader) DefineClass(name string, data []byte) *Class {
 	return self._loadClass(name, data)
 }

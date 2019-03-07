@@ -19,7 +19,7 @@ type Options struct {
 	XuseJavaHome bool
 }
 
-// getters
+// Classpath: getters
 func (self *Options) Classpath() string {
 	return self.classpath
 }

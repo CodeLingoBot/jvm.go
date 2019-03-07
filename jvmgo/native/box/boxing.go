@@ -10,7 +10,7 @@ func Unbox(obj *heap.Object, primitiveDescriptor string) interface{} {
 	return obj.GetFieldValue("value", primitiveDescriptor)
 }
 
-// boxing primitive types
+// Box: boxing primitive types
 // primitive value must be on the top of operand stack
 func Box(frame *rtda.Frame, primitiveDescriptor byte) {
 	switch primitiveDescriptor {
